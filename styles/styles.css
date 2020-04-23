@@ -1,3 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700&display=swap');
+
+/******************************
+*          GENERAL            *
+******************************/
+
+:root {
+  /* Sizing */
+  --mobile-width: 420px;
+  --padding-unit: 0.5em;
+  --section-margin: 3em;
+
+  /* Colors */
+  --primary-color: hsl(322, 100%, 66%);
+  --neutral-dark: hsl(192, 100%, 9%);
+  --neutral-pale: hsl(207, 100%, 98%);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+
+header,
+section {
+  /* margin-bottom: var(--section-margin); */
+  padding: 0 5em;
+}
+
+@media (max-width: 650px) {
+
+  header,
+  section,
+  footer {
+    margin-bottom: var(--section-margin);
+    padding: 0 2em;
+  }
+}
+
+.round-button {
+  align-items: center;
+  border-radius: calc(var(--padding-unit) * 4);
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-unit) calc(var(--padding-unit) * 4);
+  text-decoration: none;
+}
+
+.main--button {
+  background-color: var(--primary-color);
+  box-shadow: 0px 3px lightgrey;
+  color: var(--neutral-pale);
+  font-weight: 700;
+  padding: calc(var(--padding-unit) * 2) calc(var(--padding-unit) * 8);
+}
+
+/******************************
+*          HEADER             *
+******************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header--button {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/******************************
+*          HERO               *
+******************************/
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero>* {
+  text-align: center;
+}
+
+.hero--text {
+  color: var(--neutral-dark);
+  font-weight: 500;
+}
+
+/******************************
+*          INTRO              *
+******************************/
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.intro--mockup {
+  flex: 1 0 100%;
+}
+
+.intro--metric {
+  color: var(--neutral-dark);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 10.5em;
+  text-align: center;
+}
+
+.intro--metric>img {
+  align-self: flex-start;
+  width: 2em;
+}
+
+.intro--metric>h1 {
+  /* align-self: flex-start; */
+  font-size: 4em;
+}
+
+.intro--metric>p {
+  color: grey;
+}
+
+/******************************
+*          ILLUSTRATION       *
+******************************/
+
+.illustration {
+  align-items: center;
+  color: var(--neutral-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 5em;
+  text-align: center;
+}
+
+.illustration>img {
+  width: 100%;
+}
+
+@media (min-width: 420px) {
+  .illustration {
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0em;
+    text-align: left;
+  }
+
+  .illustration>* {
+    flex: 1 0 50%;
+  }
+
+  .illustration>img.odd {
+    order: 2;
+  }
+}
+
+/******************************
+*          GET STARTED        *
+******************************/
+
+.get-started {
+  align-items: center;
+  color: var(--neutral-dark);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/******************************
+*          FOOTER             *
+******************************/
+
+.footer {
+  color: var(--neutral-pale);
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  background: var(--neutral-dark);
+}
+
+.footer--newsletter {
+  /* lala */
+}
+
+.subscribe {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+#button--subscribe__submit {
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: none;
+  margin: 10px;
+}
+
+.footer--contact {
+  order: 2;
+}
+
 /******************************
 *          ATTRIBUTION        *
 ******************************/
