@@ -27,7 +27,7 @@
     </header>
 
     <section class="hero">
-      <h1 class="hero--title">Build The Community Your Fans Will Love</h1>
+      <h3 class="hero--title">Build The Community Your Fans Will Love</h3>
       <p class="hero--text">
         Huddle re-imagines the way we build communities. You have a voice, but
         so does your audience. Create connections with your users as you engage
@@ -39,7 +39,13 @@
     </section>
 
     <section class="intro">
-      <img class="intro--mockup" src="./images/screen-mockups.svg" alt="App" />
+      <div class="mockup--container">
+        <img
+          class="intro--mockup"
+          src="./images/screen-mockups.svg"
+          alt="App"
+        />
+      </div>
       <div class="intro--metric">
         <img src="./images/icon-communities.svg" alt="Icon" />
         <h1 class="metric__measure">1.4k+</h1>
@@ -53,14 +59,26 @@
     </section>
 
     <section class="illustrations">
-      <div class="illustration">
+      <div class="illustration odd">
         <img
-          class="odd"
-          src="./images/illustration-grow-together.svg"
-          alt="Picture"
+          src="./images/bg-section-top-mobile-1.svg"
+          alt=""
+          class="top-pattern pattern"
         />
+        <img
+          src="./images/bg-section-bottom-mobile-1.svg"
+          alt=""
+          class="bottom-pattern pattern"
+        />
+        <div class="illustration--pic">
+          <img
+            class="odd"
+            src="./images/illustration-grow-together.svg"
+            alt="Picture"
+          />
+        </div>
         <div class="illustration--description">
-          <h2 class="illustration__title">Grow Together</h2>
+          <h3 class="illustration__title">Grow Together</h3>
           <p class="illustration__text">
             Generate meaningful discussions with your audience and build a
             strong, loyal community. Think of the insightful conversations you
@@ -69,12 +87,14 @@
         </div>
       </div>
       <div class="illustration">
-        <img
-          src="./images/illustration-flowing-conversation.svg"
-          alt="Picture"
-        />
+        <div class="illustration--pic">
+          <img
+            src="./images/illustration-flowing-conversation.svg"
+            alt="Picture"
+          />
+        </div>
         <div class="illustration--description">
-          <h2 class="illustration__title">Flowing Conversations</h2>
+          <h3 class="illustration__title">Flowing Conversations</h3>
           <p class="illustration__text">
             You wouldn't paginate a conversation in real life, so why do it
             online? Our threads have just-in-time loading for a more natural
@@ -82,14 +102,16 @@
           </p>
         </div>
       </div>
-      <div class="illustration">
-        <img
-          class="odd"
-          src="./images/illustration-your-users.svg"
-          alt="Picture"
-        />
+      <div class="illustration odd">
+        <div class="illustration--pic">
+          <img
+            class="odd"
+            src="./images/illustration-your-users.svg"
+            alt="Picture"
+          />
+        </div>
         <div class="illustration--description">
-          <h2 class="illustration__title">Your Users</h2>
+          <h3 class="illustration__title">Your Users</h3>
           <p class="illustration__text">
             It takes no time at all to integrate Huddle with your app's
             authentication solution. This means, once signed in to your app,
@@ -106,6 +128,18 @@
       >
     </section>
 
+    <picture class="footer--top">
+      <source
+        media="(max-width: 600px)"
+        srcset="./images/bg-footer-top-mobile.svg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="./images/bg-footer-top-desktop.svg"
+      />
+      <img class="introimage" src="" alt="FooterTop" />
+    </picture>
+
     <section class="footer">
       <div class="footer--contact">
         <img class="contact__logo" src="./images/logo_footer.svg" alt="Logo" />
@@ -114,17 +148,17 @@
           quam, hendrerit lacinia vestibulum a, ultrices quis sem.
         </p>
         <p class="contact__phone">
-          <img src="" alt="Phone" />
+          <img src="./images/icon-phone.svg" alt="Phone" />
           Phone: +1-543-123-4567
         </p>
         <p class="contact__mail">
-          <img src="" alt="Mail" />
+          <img src="./images/icon-email.svg" alt="Mail" />
           example@huddle.com
         </p>
         <p class="contact__socmedia">
-          <img src="" alt="Facebook" />
-          <img src="" alt="Instagram" />
-          <img src="" alt="Twitter" />
+          <img src="./images/icon-facebook.svg" alt="Facebook" />
+          <img src="./images/icon-instagram.svg" alt="Instagram" />
+          <img src="./images/icon-twitter.svg" alt="Twitter" />
         </p>
       </div>
       <div class="footer--newsletter">
