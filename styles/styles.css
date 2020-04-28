@@ -7,7 +7,7 @@
 :root {
   /* Sizing */
   --padding-unit: 3em;
-  --section-margin: 12em;
+  --section-margin: 12rem;
 
   /* Colors */
   --primary-color: hsl(322, 100%, 66%);
@@ -69,7 +69,7 @@ p {
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
   header,
   section {
@@ -133,7 +133,7 @@ p {
 }
 
 .hero--title {
-  margin-bottom: calc(var(--section-margin)/(3*3.052));
+  margin-bottom: calc(var(--section-margin)/4);
   text-align: center;
 }
 
@@ -160,7 +160,7 @@ p {
 }
 
 .intro>* {
-  margin-bottom: var(--section-margin);
+  margin-bottom: calc(var(--section-margin)/1.5);
 }
 
 .intro--metric {
@@ -185,7 +185,7 @@ p {
   color: grey;
 }
 
-@media (min-width: 600px) {}
+@media (min-width: 700px) {}
 
 /******************************
 *          ILLUSTRATION       *
@@ -197,27 +197,26 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin-bottom: var(--section-margin);
+  margin-bottom: calc(var(--section-margin)*1.5);
   padding: 0 var(--padding-unit);
   position: relative;
   text-align: center;
 }
 
-img.top-pattern {
-  fill: white;
-  padding: 0;
-  position: absolute;
-  bottom: 100%;
-  width: 100%;
-}
-
-img.bottom-pattern {
+.pattern {
   display: block;
   fill: white;
   padding: 0;
   position: absolute;
-  bottom: 0%;
   width: 100%;
+}
+
+img.top-pattern {
+  bottom: 100%;
+}
+
+img.bottom-pattern {
+  bottom: 0%;
   transform: translateY(100%);
 }
 
@@ -227,9 +226,17 @@ img.bottom-pattern {
   background: var(--neutral-pale);
 }
 
-.illustration>* {
-  flex: 1 0 50%;
-  padding-bottom: var(--section-margin);
+.illustration--pic,
+.illustration--description {
+  margin-bottom: calc(var(--section-margin)/1.5);
+}
+
+.illustration__title {
+  margin-bottom: calc(var(--section-margin)/16);
+}
+
+.illustration__text {
+  text-align: left;
 }
 
 .illustration--pic>img {
@@ -245,7 +252,7 @@ img.bottom-pattern {
   justify-content: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 701px) {
   .illustration {
     align-items: center;
     flex-direction: row;
@@ -268,7 +275,19 @@ img.bottom-pattern {
   color: var(--neutral-dark);
   display: flex;
   flex-direction: column;
+  margin-bottom: calc(var(--section-margin)*2);
   text-align: center;
+}
+
+.get-started--title {
+  margin-bottom: calc(var(--section-margin)/8);
+  padding: 0 48px;
+}
+
+@media (max-width: 420px) {
+  .get-started--title {
+    padding: 0 24px;
+  }
 }
 
 /******************************
@@ -280,16 +299,30 @@ img.bottom-pattern {
   width: 100%;
 }
 
+.footer--newsletter {
+  padding: calc(var(--padding-unit)*2) 0 calc(var(--padding-unit)*3) 0;
+}
+
+.newsletter__title {
+  text-transform: uppercase;
+  margin-bottom: calc(var(--section-margin)/16);
+}
+
+.footer__text {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-bottom: calc(var(--section-margin)/6);
+}
+
 .footer {
+  background: var(--neutral-dark);
   color: var(--neutral-pale);
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  background: var(--neutral-dark);
-}
-
-.footer--newsletter {
-  /* lala */
+  padding: 0 var(--padding-unit);
+  margin: 0;
 }
 
 .subscribe {
@@ -302,17 +335,51 @@ img.bottom-pattern {
   align-self: stretch;
   border-radius: 0.5em;
   border: none;
+  height: 5em;
 }
 
 #button--subscribe__submit {
   border-radius: 0.5em;
   border: none;
   box-shadow: none;
-  margin: 10px 0px;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1.5em 0 0 0;
+  padding: calc(var(--padding-unit)/4) calc(var(--padding-unit)*0.8);
 }
 
 .footer--contact {
   order: 2;
+}
+
+.footer--contact>* {
+  margin-bottom: calc(var(--section-margin)/4);
+}
+
+.contact__logo {
+  margin-bottom: calc(var(--section-margin)/8);
+}
+
+.contact__phone {
+  margin-bottom: calc(var(--section-margin)/8);
+}
+
+.contact--option {
+  align-items: center;
+  display: flex;
+}
+
+.contact--option>img {
+  margin-right: calc(var(--section-margin)/12);
+}
+
+.contact__socmedia {
+  align-items: center;
+  display: flex;
+}
+
+.socmedia {
+  margin-right: calc(var(--section-margin)/8);
 }
 
 /******************************
