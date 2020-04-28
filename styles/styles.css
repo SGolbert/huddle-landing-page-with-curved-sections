@@ -7,7 +7,8 @@
 :root {
   /* Sizing */
   --padding-unit: 3em;
-  --section-margin: 12rem;
+  --section-margin: 8rem;
+  /* --section-margin: 12rem; */
 
   /* Colors */
   --primary-color: hsl(322, 100%, 66%);
@@ -95,6 +96,12 @@ p {
   padding: calc(var(--padding-unit) * 0.5) calc(var(--padding-unit) * 8 / 6);
 }
 
+@media (min-width: 701px) {
+  :root {
+    --section-margin: 12rem;
+  }
+}
+
 /******************************
 *          HEADER             *
 ******************************/
@@ -168,7 +175,7 @@ p {
   display: flex;
   flex: 1 0 100%;
   justify-content: center;
-  margin: 0 var(--padding-unit);
+  margin: 0 calc(var(--padding-unit)*0.5) calc(var(--padding-unit)*1) calc(var(--padding-unit)*0.5);
 }
 
 .intro--mockup {
@@ -176,14 +183,11 @@ p {
   width: 100%;
 }
 
-.intro>* {
-  margin-bottom: calc(var(--section-margin)/1.5);
-}
-
 .intro--metric {
   color: var(--neutral-dark);
   display: flex;
   flex-direction: column;
+  margin-bottom: calc(var(--section-margin)/1.5);
   text-align: center;
 }
 
@@ -207,6 +211,7 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0 var(--padding-unit);
   }
 }
 
