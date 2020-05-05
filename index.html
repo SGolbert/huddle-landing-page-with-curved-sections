@@ -13,6 +13,10 @@
     />
 
     <title>Frontend Mentor | Huddle landing page with curved sections</title>
+    <meta
+      name="Description"
+      content="Frontendmentor challenge simulating a landing page."
+    />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
@@ -245,7 +249,13 @@
             newsletter. We’ll never send you spam or pass on your email address
           </p>
           <form action="#" class="subscribe" aria-label="subscribe">
+            <label class="visuallyhidden" for="input--subscribe__text"
+              >Type in your email</label
+            >
             <input type="text" name="email" id="input--subscribe__text" />
+            <label class="visuallyhidden" for="button--subscribe__submit"
+              >Submit your email</label
+            >
             <button
               aria-label="subscribe-button"
               class="main--button"
